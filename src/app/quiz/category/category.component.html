@@ -1,0 +1,6 @@
+<section class="question_container" *ngFor="let content of quizCategory; let i = index">
+  <button href="http://localhost:4200/question">
+    <h4 class="question_label"><b>Category {{ i + 1 }} :</b> {{ content?.category }}</h4>
+  </button>
+  <!-- <app-answer [answers]="content?.answers" [questionId]="content?.id"></app-answer> -->
+</section>
