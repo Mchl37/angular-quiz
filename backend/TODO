@@ -1,0 +1,31 @@
+Pour accomplir les consignes données, vous devrez suivre ces étapes :
+
+    Créer un nouveau composant : Créez un composant appelé "Categories" (ou un nom similaire) en utilisant la commande Angular CLI ng generate component Categories.
+
+    Créer un nouveau service : Créez un service appelé "CategoryService" en utilisant la commande Angular CLI ng generate service CategoryService. Ce service sera responsable de récupérer les catégories à partir de votre base de données.
+
+    Utiliser le Router avec des paramètres : Configurez votre fichier de routage (app-routing.module.ts) pour inclure une nouvelle route vers le composant de catégories. Par exemple :
+
+    typescript
+
+{ path: 'categories', component: CategoriesComponent }
+
+Lorsque vous cliquez sur une catégorie, utilisez le routeur pour naviguer vers la page du quiz avec l'ID de la catégorie passé en paramètre. La route pourrait ressembler à ceci :
+
+typescript
+
+    { path: 'quiz/:categoryId', component: QuizComponent }
+
+    Utiliser au moins un Input : Dans votre composant de catégories, utilisez un Input pour recevoir les données des catégories depuis le parent (probablement votre service de catégorie).
+
+    Utiliser le service HttpClient : Dans votre service de catégorie, utilisez HttpClient pour effectuer une requête GET vers votre base de données et récupérer les catégories.
+
+    Utiliser les "Template Driven Forms" : Sur la page des catégories, ajoutez un champ de recherche et un bouton de réinitialisation. Utilisez les "Template Driven Forms" pour gérer ces champs.
+
+    Afficher les catégories sous forme de carte : Dans le template de votre composant de catégories, utilisez une boucle *ngFor pour afficher les catégories sous forme de cartes. Chaque carte devrait avoir un lien vers la page du quiz avec l'ID de la catégorie passé comme paramètre.
+
+    Filtrer les catégories : Ajoutez la logique nécessaire pour filtrer les catégories en fonction de la recherche de l'utilisateur. Lorsque l'utilisateur appuie sur le bouton de réinitialisation, réaffichez toutes les catégories.
+
+    Afficher la catégorie choisie sur la page du quiz : Dans le composant du quiz, utilisez le service de catégorie pour récupérer le nom de la catégorie à partir de son ID (passé dans les paramètres de l'URL). Affichez ce nom de catégorie sur la page du quiz.
+
+En suivant ces étapes, vous serez en mesure de créer une application Angular qui répond aux exigences spécifiées dans les consignes. Assurez-vous de consulter la documentation officielle d'Angular et d'Angular CLI pour des détails plus approfondis sur chaque étape.
