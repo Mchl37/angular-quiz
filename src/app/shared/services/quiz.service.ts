@@ -9,7 +9,7 @@ export class QuizService {
   playerAnswers: {questionId: number; answer: string}[] = [];
   score = 0;
   isQuizFinished = false;
-  playerName: string = '';
+  playerName: string = 'test';
 
   constructor(private http: HttpClient) { }
 

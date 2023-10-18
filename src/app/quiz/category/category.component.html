@@ -1,0 +1,39 @@
+<section class="question_container" *ngFor="let content of quizCategory; let i = index">
+  <button class="home_quiz-btn btn--outline" (click)="navigateToQuiz()">
+    <h4 class="question_label"><b>Category {{ i + 1 }} :</b> {{ content?.category }}</h4>
+  </button>
+</section>
+[13:01] Michel GUELIN
+
+<!-- <section>
+
+  <h2 class="categories_title">Choisissez la catégorie souhaitée !</h2>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-4" *ngFor="let category of categories">
+
+        <div class="card">
+
+          <div class="card-body">
+
+            <h5 class="card-title">{{ category.name }}</h5>
+
+            <a [routerLink]="['/quiz', category.id]" class="btn btn-primary">Commencer le quiz</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <button class="home_quiz-btn btn--outline">Démarrer</button>
+
+</section> -->
